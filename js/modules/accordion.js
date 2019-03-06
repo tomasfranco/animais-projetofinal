@@ -16,10 +16,10 @@ export default class Accordion {
     });
   }
 
-// iniciar função  
+  // iniciar função
   init() {
     if (this.accordionList.length) {
-      //ativar primeiro item
+      // ativar primeiro item
       this.toggleAccordion(this.accordionList[0]);
       this.addAccordionEvent();
     }
