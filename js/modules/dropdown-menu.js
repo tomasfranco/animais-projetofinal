@@ -33,7 +33,7 @@ export default class DropdownMenu {
 
   init() {
     if (this.dropdownMenus.length) {
-      this.addDropDownMenusEvent();
+      this.addDropdownMenusEvent();
     }
     return this;
   }
