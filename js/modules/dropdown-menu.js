@@ -1,6 +1,6 @@
-import outsideclick from './outsideclick.js';
+import outsideClick from './outsideclick.js';
 
-export default class DropDownMenu {
+export default class DropdownMenu {
   constructor(dropdownMenus, events) {
     this.dropdownMenus = document.querySelectorAll(dropdownMenus);
 
@@ -17,14 +17,13 @@ export default class DropDownMenu {
     event.preventDefault();
     const element = event.currentTarget;
     element.classList.add(this.activeClass);
-    // eslint-disable-next-line no-undef
     outsideClick(element, this.events, () => {
       element.classList.remove('active');
     });
   }
 
   // adiciona os eventos ao dropdownmenu
-  addDropDownMenuEvents() {
+  addDropdownMenusEvent() {
     this.dropdownMenus.forEach((menu) => {
       this.events.forEach((userEvent) => {
         menu.addEventListener(userEvent, this.activeDropdownMenu);
@@ -34,7 +33,7 @@ export default class DropDownMenu {
 
   init() {
     if (this.dropdownMenus.length) {
-      this.addDropDownMenuEvents();
+      this.addDropDownMenusEvent();
     }
     return this;
   }
